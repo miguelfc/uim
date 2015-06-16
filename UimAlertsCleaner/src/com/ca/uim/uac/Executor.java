@@ -46,7 +46,9 @@ public class Executor {
             conn.setRequestProperty("Authorization", "Basic " + new String(encodedAuth));
             OutputStream os = conn.getOutputStream();
             os.flush();
-
+            conn.setReadTimeout(30000);
+            
+            log.debug("Launching the HTTP request...");
             if (conn.getResponseCode() == HttpURLConnection.HTTP_NOT_FOUND) {
                 log.warn("Alert was not found in UIM. No action was performed. HTTP Code: <" + HttpURLConnection.HTTP_NOT_FOUND + ">");
                 result = false;
@@ -65,7 +67,6 @@ public class Executor {
             log.error("An error occurred in the acknowledge request. See details below.", e);
             result = false;
         }
-
         return result;
     }
 }

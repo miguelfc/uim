@@ -4,8 +4,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
-import java.util.Random;
-
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.jasypt.util.text.BasicTextEncryptor;
@@ -20,30 +18,10 @@ public class Main {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
 
-        ExecutionLock ua = new ExecutionLock("uac");
+        //ExecutionLock ua = new ExecutionLock("uac");
 
         PropertyConfigurator.configure(Configuration.getConfigPath() + "/log4j.properties");
         Logger log = Logger.getLogger(Main.class.getName());
-
-        // MFC Verify if this is needed
-        if (ua.isAppActive()) {
-            Random random = new Random(System.currentTimeMillis()); // or new Random(someSeed);
-            int delay = 5 + random.nextInt(30);
-            log.warn("There is another instance of this application active. This execution will be delayed " + delay + " seconds.");
-            try {
-                Thread.sleep(delay * 1000);
-            } catch (InterruptedException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-            log.info("Retrying...");
-
-            if (ua.isAppActive()) {
-                log.error("There is another instance of this application active. This execution will be aborted.");
-                log.error("Stopped.");
-                System.exit(1);
-            }
-        }
 
         log.info("Starting application...");
 
