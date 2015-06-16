@@ -20,15 +20,14 @@ directory inside the main one and copy the jar file there.
   * lib
   * config
 
-3. Manually create the `control` and `log` directories inside the installation directory.
-4. Edit the following files and substitute the example paths with the ones in your environment (e.g., Java path, 
+3. Edit the following files and substitute the example paths with the ones in your environment (e.g., Java path, 
 application directory), as well as the username and log file destination.
   * config/config.properties
   * config/log4j.properties
   * bin/run.bat
   * bin/encrypt.bat
 
-5. Finally, execute the script `bin/encrypt.bat` in order to encrypt the connection password, and copy the result to the `uim.password` property in the `config.properties` file. For example:
+4. Finally, execute the script `bin/encrypt.bat` in order to encrypt the connection password, and copy the result to the `uim.password` property in the `config.properties` file. For example:
 ```
 bin\encrypt.bat mypassword
 ```
