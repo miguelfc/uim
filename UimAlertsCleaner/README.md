@@ -16,7 +16,7 @@ directory inside the main one and copy the jar file there.
 ## Installation
 
 1. Create a directory where you will install the application. For example: `D:\CA\UAC`.
-2. Copy the following directories:
+2. Copy the following directories from your build path to the destination directory:
   * lib
   * config
 
