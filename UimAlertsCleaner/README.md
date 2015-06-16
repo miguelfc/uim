@@ -28,7 +28,7 @@ application directory), as well as the username and log file destination.
   * bin/run.bat
   * bin/encrypt.bat
 
-5. Finally, execute the script `bin/encrypt.bat` in order to encrypt the connection password. For example:
+5. Finally, execute the script `bin/encrypt.bat` in order to encrypt the connection password, and copy the result to the `uim.password` property in the `config.properties` file. For example:
 ```
 bin\encrypt.bat mypassword
 ```
