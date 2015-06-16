@@ -17,7 +17,6 @@ import org.jasypt.util.text.BasicTextEncryptor;
 public class Main {
     // Arguments:
     // <source_alert_id>
-    // Example: CA:00036:VMWTBSOIIFWP01.wtes.whitees.corp:bebfacoori02-KY12300049-76631-bebfacoori02
     public static void main(String[] args) {
         // TODO Auto-generated method stub
 

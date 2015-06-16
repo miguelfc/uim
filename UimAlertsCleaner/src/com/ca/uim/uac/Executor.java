@@ -19,7 +19,6 @@ public class Executor {
     private String alertId;
 
     public Boolean setAlertId(String sourceAlertId) {
-        // CA:00036:VMWTBSOIIFWP01.wtes.whitees.corp:bebfacoori02-KY12300049-76631-bebfacoori02
         if (!sourceAlertId.matches(".*-[A-Z]{2}[0-9]{8}-[0-9]{5}-.*")) {
             return false;
         }
