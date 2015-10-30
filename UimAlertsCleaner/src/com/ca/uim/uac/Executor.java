@@ -19,11 +19,11 @@ public class Executor {
     private String alertId;
 
     public Boolean setAlertId(String sourceAlertId) {
-        if (!sourceAlertId.matches(".*-[A-Z]{2}[0-9]{8}-[0-9]{5}-.*")) {
+        if (!sourceAlertId.matches(".*-[A-Z]{2}[0-9]{8}-[0-9]{5}.*")) {
             return false;
         }
         else {
-            this.alertId = sourceAlertId.replaceAll(".*-([A-Z]{2}[0-9]{8}-[0-9]{5})-.*", "$1");
+            this.alertId = sourceAlertId.replaceAll(".*-([A-Z]{2}[0-9]{8}-[0-9]{5}).*", "$1");
             return true;
         }
     }
